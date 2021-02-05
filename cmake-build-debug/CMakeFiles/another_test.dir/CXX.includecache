@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/pc/CLionProjects/another-test/Enemy.cpp
+Enemy.h
+C:/Users/pc/CLionProjects/another-test/Enemy.h
+
+C:/Users/pc/CLionProjects/another-test/Enemy.h
+Entity.h
+C:/Users/pc/CLionProjects/another-test/Entity.h
+
+C:/Users/pc/CLionProjects/another-test/Entity.h
+TextureLoader.h
+C:/Users/pc/CLionProjects/another-test/TextureLoader.h
+
+C:/Users/pc/CLionProjects/another-test/TextureLoader.h
+SDL2/SDL.h
+C:/Users/pc/CLionProjects/another-test/SDL2/SDL.h
+SDL2/SDL_image.h
+C:/Users/pc/CLionProjects/another-test/SDL2/SDL_image.h
+
