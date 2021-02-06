@@ -7,8 +7,11 @@
 #include <random>
 #include <chrono>
 
-//std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
-std::mt19937 rng(1012);
+std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
+//std::mt19937 rng(1012);
+int rnd(int l, int r) {
+    return l + rng() % (r - l + 1);
+}
 
 int tmp[16][20]={
         {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
@@ -24,14 +27,10 @@ int tmp[16][20]={
         {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
         {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
         {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
-        {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
         {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}
 };
-
-int rnd(int l, int r) {
-    return l + rng() % (r - l + 1);
-}
 
 Map::Map(int width, int height) {
     dirt = TextureLoader::LoadTexture(R"(C:\Users\pc\CLionProjects\another-test\resources\dirt.png)");
@@ -72,8 +71,8 @@ void Map::loadMap() {
 }
 
 void Map::drawMap() {
-    for (int row = 0; row < 16; ++row) {
-        for (int column = 0; column < 20; ++column) {
+    for (int row = 0; row < height; ++row) {
+        for (int column = 0; column < width; ++column) {
             destR.y = row * 64, destR.x = column * 64;
             switch (schemeMap[row][column]) {
                 case 0:
@@ -85,11 +84,9 @@ void Map::drawMap() {
                 case 2:
                     TextureLoader::Draw(grass, srcR, destR);
                     break;
-
                 default:
                     break;
             }
-
         }
     }
 }

@@ -5,22 +5,39 @@
 #include "Player.h"
 #include "Manager.h"
 
-void Player::Update() {
-    int xAdd = 0, yAdd = 0, xSub = 0, ySub = 0;
-    for (int i = 0; i < 4; ++i) {
-        if (direction[i]) {
-            xAdd |= C[i] > 0;
-            xSub |= C[i] < 0;
-            yAdd |= D[i] > 0;
-            ySub |= D[i] < 0;
-        }
+void Player::moveLeft() {
+    Flip(SDL_FLIP_HORIZONTAL);
+    if (!isMovingLeft) {
+        isMovingLeft = true;
+        velocity -= speed;
     }
+}
 
-    if(!willBeBlocked){
-        destR.x += (xAdd - xSub) * speed;
-        destR.y += (yAdd - ySub) * speed;
-        hitBox.x = destR.x + hitBoxOffsetX;
-        hitBox.y = destR.y + hitBoxOffsetY;
+void Player::stopMovingLeft() {
+    if (isMovingLeft) {
+        isMovingLeft = false;
+        velocity += speed;
+    }
+}
+
+void Player::moveRight() {
+    Flip(SDL_FLIP_NONE);
+    if (!isMovingRight) {
+        isMovingRight = true;
+        velocity += speed;
+    }
+}
+
+void Player::stopMovingRight() {
+    if (isMovingRight) {
+        isMovingRight = false;
+        velocity -= speed;
+    }
+}
+
+void Player::Update() {
+    if (!willBeBlocked) {
+        hitBox.x = (destR.x += velocity) + hitBoxOffsetX;
     }
 
     Uint32 currentTime = SDL_GetTicks();
@@ -33,7 +50,7 @@ void Player::Update() {
         currentStatus = 3;
         if (currentTime >= lastAnimationTime + animationDelay) {
             objTexture = stabAnimations[currentAnimation];
-            currentAnimation = (currentAnimation +1 < stabAnimations.size() ? currentAnimation+1 : currentAnimation);
+            currentAnimation = (currentAnimation + 1 < stabAnimations.size() ? currentAnimation + 1 : currentAnimation);
             //currentAnimation = (currentAnimation + 1) % stabAnimations.size();
             lastAnimationTime = currentTime;
         }
@@ -50,7 +67,7 @@ void Player::Update() {
             currentAnimation = (currentAnimation + 1) % whirlwindAnimations.size();
             lastAnimationTime = currentTime;
         }
-    } else if ((xAdd - xSub || yAdd - ySub) and !willBeBlocked) {
+    } else if (velocity and !willBeBlocked) {
         animationDelay = 200;
         if (currentStatus != 1)
             currentAnimation = 0;
@@ -82,19 +99,7 @@ void Player::Render() {
 
 SDL_Rect Player::GetFakeHitBox() {
     SDL_Rect ret = hitBox;
-    int xAdd = 0, yAdd = 0, xSub = 0, ySub = 0;
-    for (int i = 0; i < 4; ++i) {
-        if (direction[i]) {
-            xAdd |= C[i] > 0;
-            xSub |= C[i] < 0;
-            yAdd |= D[i] > 0;
-            ySub |= D[i] < 0;
-        }
-    }
-
-    ret.x = destR.x + hitBoxOffsetX + (xAdd - xSub) * speed;
-    ret.y = destR.y + hitBoxOffsetY + (yAdd - ySub) * speed;
-
+    hitBox.x += velocity;
     return ret;
 }
 
@@ -122,7 +127,7 @@ void Player::AddSpeed(int x, int y) {
     direction[x] = y;
 }
 
-void Player::SetHitBox(int x, int y, int w, int h) {
+void Player::setHitBox(int x, int y, int w, int h) {
     hitBoxOffsetX = x;
     hitBoxOffsetY = y;
     hitBox.h = h;
@@ -133,91 +138,7 @@ void Player::AttackJ() {
     sword->AttackJ(destR.x, destR.y, (flip == SDL_FLIP_HORIZONTAL ? -1 : 1));
 }
 
-/** Setters Getters*/
-/** Setters Getters*/
-/** Setters Getters*/
-/** Setters Getters*/
-
-int Player::getCurrentAnimation() const {
-    return currentAnimation;
-}
-
-void Player::setCurrentAnimation(int currentAnimation) {
-    Player::currentAnimation = currentAnimation;
-}
-
-int Player::getSpeed() const {
-    return speed;
-}
-
-void Player::setSpeed(int speed) {
-    Player::speed = speed;
-}
-
-const int *Player::getDirection() const {
-    return direction;
-}
-
-SDL_Texture *Player::getObjTexture() const {
-    return objTexture;
-}
-
-void Player::setObjTexture(SDL_Texture *objTexture) {
-    Player::objTexture = objTexture;
-}
-
-const SDL_Rect &Player::getHitBox() const {
-    return hitBox;
-}
-
-void Player::setHitBox(const SDL_Rect &hitBox) {
-    Player::hitBox = hitBox;
-}
-
-SDL_RendererFlip Player::getFlip() const {
-    return flip;
-}
-
-void Player::setFlip(SDL_RendererFlip flip) {
-    Player::flip = flip;
-}
-
-Uint32 Player::getTimeSinceLastUpdate() const {
-    return timeSinceLastUpdate;
-}
-
-void Player::setTimeSinceLastUpdate(Uint32 timeSinceLastUpdate) {
-    Player::timeSinceLastUpdate = timeSinceLastUpdate;
-}
-
-int Player::getHitBoxOffsetX() const {
-    return hitBoxOffsetX;
-}
-
-void Player::setHitBoxOffsetX(int hitBoxOffsetX) {
-    Player::hitBoxOffsetX = hitBoxOffsetX;
-}
-
-int Player::getHitBoxOffsetY() const {
-    return hitBoxOffsetY;
-}
-
-void Player::setHitBoxOffsetY(int hitBoxOffsetY) {
-    Player::hitBoxOffsetY = hitBoxOffsetY;
-}
-
-int Player::getHealth() const {
-    return health;
-}
-
-void Player::setHealth(int health) {
-    Player::health = health;
-}
-
 Weapon *Player::getSword() const {
     return sword;
 }
 
-void Player::setSword(Weapon *sword) {
-    Player::sword = sword;
-}

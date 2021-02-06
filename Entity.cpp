@@ -31,26 +31,3 @@ void Entity::Render() {
     SDL_RenderCopy(Manager::renderer, objTexture, nullptr, &destR);
 }
 
-SDL_Texture *Entity::getMainTexture() const {
-    return objTexture;
-}
-
-void Entity::setMainTexture(SDL_Texture *mainTexture) {
-    Entity::objTexture = mainTexture;
-}
-
-const SDL_Rect &Entity::getSrcR() const {
-    return srcR;
-}
-
-void Entity::setSrcR(const SDL_Rect &srcR) {
-    Entity::srcR = srcR;
-}
-
-const SDL_Rect &Entity::getDestR() const {
-    return destR;
-}
-
-void Entity::setDestR(const SDL_Rect &destR) {
-    Entity::destR = destR;
-}

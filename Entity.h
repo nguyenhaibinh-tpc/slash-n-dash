@@ -18,23 +18,19 @@ public:
 
     void setPosition(int xpos, int ypos);
 
+    void setDestR(int x, int y, int w, int h) {
+        destR.x = x;
+        destR.y = y;
+        destR.w = w;
+        destR.h = h;
+    }
+
     void Render();
 
 protected:
     SDL_Texture *objTexture;
-    SDL_Rect srcR, destR;
-public:
-    SDL_Texture *getMainTexture() const;
-
-    void setMainTexture(SDL_Texture *mainTexture);
-
-    const SDL_Rect &getSrcR() const;
-
-    void setSrcR(const SDL_Rect &srcR);
-
-    const SDL_Rect &getDestR() const;
-
-    void setDestR(const SDL_Rect &destR);
+    SDL_Rect srcR;
+    SDL_Rect destR;
 };
 
 

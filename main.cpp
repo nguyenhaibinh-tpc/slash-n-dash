@@ -12,7 +12,8 @@ int main(int argc, char *argv[]) {
 
     game = new Manager();
 
-    game->init("Title", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64 * 20, 64 * 16, false);
+    //game->init("Title", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64 * 20, 64 * 16, false);
+    game->init("Title", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280 , 720 , false);
 
     Uint32 frameStart;
     int frameTime;

@@ -6,7 +6,7 @@ SDL_Renderer *Manager::renderer = nullptr;
 Map *mp;
 Player *yasuo;
 
-Entity *go;
+Entity *bg;
 
 
 Manager::Manager() {
@@ -59,7 +59,7 @@ bool noOutOfBound() {
 void initYasuo(){
     yasuo = new Player();
     yasuo->loadMainTexture(R"(C:\Users\pc\CLionProjects\another-test\resources\yasuo_norm_0.png)");
-    yasuo->setPosition(-41,-5);
+    yasuo->setPosition(-41,533);
 
 
     yasuo->addMovingAnimation(R"(C:\Users\pc\CLionProjects\another-test\resources\yasuo_moving_0.png)");
@@ -92,7 +92,7 @@ void initYasuo(){
     //yasuo->AddAnimation("C:\\Users\\pc\\CLionProjects\\another-test\\resources\\yasuo_norm_1.png");
     //yasuo->SetHitBox(16, 5, 36, 58);
     //yasuo->SetHitBox(46, 13, 20, 35);
-    yasuo->SetHitBox(92, 26, 40, 70);
+    yasuo->setHitBox(92, 26, 40, 70);
 }
 
 void Manager::init(const char *title, int x_pos, int y_pos, int width, int height, bool fullscreen) {
@@ -122,6 +122,11 @@ void Manager::init(const char *title, int x_pos, int y_pos, int width, int heigh
         yasuo->getSword()->addAnimation(path);
         //exit(0);
     }
+
+    bg = new Entity();
+    bg->loadMainTexture(R"(C:\Users\pc\CLionProjects\another-test\resources\background.png)");
+    bg->setPosition(0,0);
+    bg->setDestR(0,0,1280,720);
 }
 
 void Manager::handleEvents() {
@@ -133,22 +138,13 @@ void Manager::handleEvents() {
             break;
         case SDL_KEYDOWN:
             switch (event.key.keysym.sym) {
-                case SDLK_w:
-                    yasuo->AddSpeed(0, 1);
-                    break;
                 case SDLK_a:
-                    yasuo->AddSpeed(1, 1);
-                    yasuo->Flip(SDL_FLIP_HORIZONTAL);
-                    break;
-                case SDLK_s:
-                    yasuo->AddSpeed(2, 1);
+                    yasuo->moveLeft();
                     break;
                 case SDLK_d:
-                    yasuo->AddSpeed(3, 1);
-                    yasuo->Flip(SDL_FLIP_NONE);
+                    yasuo->moveRight();
                     break;
                 case SDLK_j:
-                    std::cout<<"J\n";
                     yasuo->AttackJ();
                 default:
                     break;
@@ -156,17 +152,11 @@ void Manager::handleEvents() {
             break;
         case SDL_KEYUP:
             switch (event.key.keysym.sym) {
-                case SDLK_w:
-                    yasuo->AddSpeed(0, 0);
-                    break;
                 case SDLK_a:
-                    yasuo->AddSpeed(1, 0);
-                    break;
-                case SDLK_s:
-                    yasuo->AddSpeed(2, 0);
+                    yasuo->stopMovingLeft();
                     break;
                 case SDLK_d:
-                    yasuo->AddSpeed(3, 0);
+                    yasuo->stopMovingRight();
                     break;
             }
             break;
@@ -186,7 +176,8 @@ void Manager::update() {
 
 void Manager::render() {
     SDL_RenderClear(renderer);
-    mp->drawMap();
+    bg->Render();
+    //mp->drawMap();
     yasuo->Render();
     SDL_RenderPresent(renderer);
 }

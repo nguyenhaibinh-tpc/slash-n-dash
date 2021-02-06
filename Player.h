@@ -25,9 +25,14 @@ public:
     void addStabAnimation(const char *texture);
     void addWhirlwindAnimation(const char *texture);
 
+    void moveLeft();
+    void moveRight();
+    void stopMovingLeft();
+    void stopMovingRight();
+
     void AddSpeed(int x, int y);
 
-    void SetHitBox(int x, int y, int w, int h);
+    void setHitBox(int x, int y, int w, int h);
 
     void setWillBeBlocked(bool tmp){
         willBeBlocked = tmp;
@@ -38,10 +43,15 @@ public:
     void AttackJ();
 
 private:
-    bool willBeBlocked = false;
+    bool isFalling;
+    bool willBeBlocked;
+    bool isMovingLeft;
+    bool isMovingRight;
+
     int currentStatus;
     int currentAnimation;
     int speed = 1;
+    int velocity;
     int hitBoxOffsetX, hitBoxOffsetY;
     const int D[4] = {-1, 0, 1, 0};
     const int C[4] = {0, -1, 0, 1};
@@ -62,46 +72,6 @@ private:
 
 public:
     Weapon *getSword() const;
-
-    void setSword(Weapon *sword);
-
-    int getHealth() const;
-
-    void setHealth(int health);
-
-    int getHitBoxOffsetX() const;
-
-    void setHitBoxOffsetX(int hitBoxOffsetX);
-
-    int getHitBoxOffsetY() const;
-
-    void setHitBoxOffsetY(int hitBoxOffsetY);
-
-    int getCurrentAnimation() const;
-
-    void setCurrentAnimation(int currentAnimation);
-
-    int getSpeed() const;
-
-    void setSpeed(int speed);
-
-    const int *getDirection() const;
-
-    SDL_Texture *getObjTexture() const;
-
-    void setObjTexture(SDL_Texture *objTexture);
-
-    const SDL_Rect &getHitBox() const;
-
-    void setHitBox(const SDL_Rect &hitBox);
-
-    SDL_RendererFlip getFlip() const;
-
-    void setFlip(SDL_RendererFlip flip);
-
-    Uint32 getTimeSinceLastUpdate() const;
-
-    void setTimeSinceLastUpdate(Uint32 timeSinceLastUpdate);
 };
 
 
