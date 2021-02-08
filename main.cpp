@@ -6,17 +6,15 @@ Manager *game;
 
 
 int main(int argc, char *argv[]) {
-
     const int FPS = 244;
     const int frameDelay = 1000 / FPS;
 
     game = new Manager();
 
-    //game->init("Title", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 64 * 20, 64 * 16, false);
     game->init("Title", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280 , 720 , false);
 
     Uint32 frameStart;
-    int frameTime;
+    Uint32 frameTime;
 
     while (game->running()) {
         frameStart = SDL_GetTicks();

@@ -24,18 +24,23 @@ public:
     void addMovingAnimation(const char *texture);
     void addStabAnimation(const char *texture);
     void addWhirlwindAnimation(const char *texture);
-
     void moveLeft();
     void moveRight();
     void stopMovingLeft();
     void stopMovingRight();
-
-    void AddSpeed(int x, int y);
-
     void setHitBox(int x, int y, int w, int h);
+    void receiveDamage(int damage);
+    void animationUpdate(std::vector<SDL_Texture *> &tmp, bool &cmd);
+
+    int getHealth() {
+        return health;
+    }
 
     void setWillBeBlocked(bool tmp){
         willBeBlocked = tmp;
+    }
+    bool isDead(){
+        return health <= 0;
     }
 
     SDL_Rect GetFakeHitBox();
@@ -43,20 +48,22 @@ public:
     void AttackJ();
 
 private:
+    bool endOfEvent;
+    bool isAttacking;
+    bool isGivingDamage;
     bool isFalling;
+    bool isStanding;
     bool willBeBlocked;
     bool isMovingLeft;
     bool isMovingRight;
+    bool enemyInRange;
 
     int currentStatus;
     int currentAnimation;
     int speed = 1;
     int velocity;
     int hitBoxOffsetX, hitBoxOffsetY;
-    const int D[4] = {-1, 0, 1, 0};
-    const int C[4] = {0, -1, 0, 1};
-    int direction[4];
-    int health;
+    int health = 70;
 
     SDL_Rect hitBox;
     SDL_RendererFlip flip = SDL_FLIP_NONE;
@@ -72,6 +79,8 @@ private:
 
 public:
     Weapon *getSword() const;
+
+    SDL_Rect getHitBox();
 };
 
 

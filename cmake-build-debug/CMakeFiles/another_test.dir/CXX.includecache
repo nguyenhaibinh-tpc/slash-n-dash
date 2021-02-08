@@ -654,6 +654,12 @@ C:/Users/pc/CLionProjects/another-test/SDL.h
 iostream
 C:/Users/pc/CLionProjects/another-test/iostream
 
+C:/Users/pc/CLionProjects/another-test/Enemy.h
+vector
+-
+Entity.h
+C:/Users/pc/CLionProjects/another-test/Entity.h
+
 C:/Users/pc/CLionProjects/another-test/Entity.h
 TextureLoader.h
 C:/Users/pc/CLionProjects/another-test/TextureLoader.h
@@ -663,6 +669,10 @@ cstring
 -
 Manager.h
 C:/Users/pc/CLionProjects/another-test/Manager.h
+Enemy.h
+C:/Users/pc/CLionProjects/another-test/Enemy.h
+bits/stdc++.h
+C:/Users/pc/CLionProjects/another-test/bits/stdc++.h
 
 C:/Users/pc/CLionProjects/another-test/Manager.h
 SDL2/SDL.h

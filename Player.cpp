@@ -5,6 +5,18 @@
 #include "Player.h"
 #include "Manager.h"
 
+void Player::animationUpdate(std::vector<SDL_Texture *> &tmp, bool &cmd) {
+    objTexture = tmp[currentAnimation];
+    isGivingDamage = isAttacking && currentAnimation == 4;
+    if (currentAnimation + 1 == tmp.size()) {
+        cmd = false;
+        endOfEvent = true;
+        currentAnimation = 0;
+        return;
+    }
+    currentAnimation += 1;
+}
+
 void Player::moveLeft() {
     Flip(SDL_FLIP_HORIZONTAL);
     if (!isMovingLeft) {
@@ -36,61 +48,28 @@ void Player::stopMovingRight() {
 }
 
 void Player::Update() {
-    if (!willBeBlocked) {
-        hitBox.x = (destR.x += velocity) + hitBoxOffsetX;
+    if (endOfEvent) {
+        if (enemyInRange)
+            isAttacking = true;
+        else
+            isMovingRight = true;
+        endOfEvent = false;
     }
 
     Uint32 currentTime = SDL_GetTicks();
-
-    if (sword->getAttackStatus() == 1) {
-        // is Q
-        animationDelay = 50;
-        if (currentStatus != 3)
-            currentAnimation = 0;
-        currentStatus = 3;
-        if (currentTime >= lastAnimationTime + animationDelay) {
-            objTexture = stabAnimations[currentAnimation];
-            currentAnimation = (currentAnimation + 1 < stabAnimations.size() ? currentAnimation + 1 : currentAnimation);
-            //currentAnimation = (currentAnimation + 1) % stabAnimations.size();
-            lastAnimationTime = currentTime;
-        }
-    } else if (sword->getAttackStatus() == 2) {
-        animationDelay = 200;
-        if (currentStatus != 2)
-            currentAnimation = 0;
-        currentStatus = 2;
-        // is QQQ
-        //std::cout<<"Nice\n";
-        //std::cout<<standingAnimations.size()<<"\n";
-        if (currentTime >= lastAnimationTime + animationDelay) {
-            objTexture = whirlwindAnimations[currentAnimation];
-            currentAnimation = (currentAnimation + 1) % whirlwindAnimations.size();
-            lastAnimationTime = currentTime;
-        }
-    } else if (velocity and !willBeBlocked) {
-        animationDelay = 200;
-        if (currentStatus != 1)
-            currentAnimation = 0;
-        currentStatus = 1;
-        if (currentTime >= lastAnimationTime + animationDelay) {
-            objTexture = movingAnimations[currentAnimation];
-            currentAnimation = (currentAnimation + 1) % movingAnimations.size();
-            lastAnimationTime = currentTime;
-        }
-        // is moving
-    } else {
-        animationDelay = 200;
-        if (currentStatus != 0)
-            currentAnimation = 0;
-        currentStatus = 0;
-        if (currentTime >= lastAnimationTime + animationDelay) {
-            objTexture = standingAnimations[currentAnimation];
-            currentAnimation = (currentAnimation + 1) % standingAnimations.size();
-            lastAnimationTime = currentTime;
-        }
-        // is standing still
+    if (currentTime >= lastAnimationTime + animationDelay) {
+        if(isAttacking)
+            animationUpdate(stabAnimations, isAttacking);
+        else if(isMovingRight){
+            animationUpdate(movingAnimations,isMovingRight);
+            destR.x += 10;
+            hitBox.x = destR.x + hitBoxOffsetX;
+        } else
+            animationUpdate(standingAnimations, isStanding);
+        lastAnimationTime = currentTime;
     }
 }
+
 
 void Player::Render() {
     SDL_RenderCopyEx(Manager::renderer, objTexture, nullptr, &destR, 0, nullptr, flip);
@@ -123,15 +102,13 @@ void Player::addWhirlwindAnimation(const char *texture) {
     whirlwindAnimations.push_back(TextureLoader::LoadTexture(texture));
 }
 
-void Player::AddSpeed(int x, int y) {
-    direction[x] = y;
-}
-
 void Player::setHitBox(int x, int y, int w, int h) {
     hitBoxOffsetX = x;
     hitBoxOffsetY = y;
     hitBox.h = h;
     hitBox.w = w;
+    hitBox.x = destR.x + hitBoxOffsetX;
+    hitBox.y = destR.y + hitBoxOffsetY;
 }
 
 void Player::AttackJ() {
@@ -142,3 +119,10 @@ Weapon *Player::getSword() const {
     return sword;
 }
 
+SDL_Rect Player::getHitBox() {
+    return hitBox;
+}
+
+void Player::receiveDamage(int damage) {
+    health -= damage;
+}

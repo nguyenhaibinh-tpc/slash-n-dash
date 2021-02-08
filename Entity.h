@@ -27,7 +27,8 @@ public:
 
     void Render();
 
-protected:
+//protected:
+public:
     SDL_Texture *objTexture;
     SDL_Rect srcR;
     SDL_Rect destR;

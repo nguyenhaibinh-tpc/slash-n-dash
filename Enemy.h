@@ -10,39 +10,78 @@
 
 class Enemy : public Entity {
 public:
-    Enemy() : Entity() {
-
+    Enemy() : Entity(){
+        isMoving = true;
+        isAttacking = false;
+        isGivingDamage = false;
+        isStanding = false;
+        endOfEvent = true;
+        attackDamage = 20;
+        attackRange = 40;
+        currentAnimation = 0;
+        speed = 5;
+        health = 50;
+        animationDelay = 130;
     }
+
+    int getAttackDamage() const;
+
+    void setAttackDamage(int attackDamage);
+
+    int getAttackRange() const;
+
+    void setAttackRange(int attackRange);
+
+    int getHealth() const;
+
+    void setHealth(int health);;
+    int getAttackFrame() const;
+
+    void setAttackFrame(int attackFrame);
+    ~Enemy(){};
 
     void Update();
     void Render();
+    void addStandingAnimation(const char *texture);
+    void addMovingAnimation(const char *texture);
+    void addAttackAnimation(const char *texture);
+    void setHitBox(int x, int y, int w, int h);
+    void animationUpdate(std::vector<SDL_Texture*> &tmp, bool &cmd);
+    void inSight(SDL_Rect x);
+    void receiveDamage(int damage);
+    void setDirection(int direction);
 
-    void Flip(SDL_RendererFlip param);
-    void addStandingAnimation(const char* texture);
-    void addMovingAnimation(const char* texture);
-    void addAttackAnimation(const char* texture);
+    bool getEndOfEvent();
+    bool isDead();
+    SDL_Rect getHitBox();
 
-    void setHitBox(int x,int y,int w,int h);
+    bool enemyInRange;
 
-private:
-    int currentStatus;
+//private:
+
+    bool isMoving;
+    bool isAttacking;
+    bool isGivingDamage;
+    bool isStanding;
+    bool endOfEvent;
+
+    int attackDamage;
+    int attackRange;
+    int attackFrame;
+
     int currentAnimation;
-    int speed = 1;
+    int speed;
     int hitBoxOffsetX, hitBoxOffsetY;
-    const int D[4] = {-1, 0, 1, 0};
-    const int C[4] = {0, -1, 0, 1};
     int health;
+    int direction;
 
     SDL_Rect hitBox;
-    SDL_RendererFlip  flip = SDL_FLIP_NONE;
-    Uint32 timeSinceLastUpdate;
-    Uint32 lastAnimationTime;
-    Uint32 animationDelay = 200;
+    SDL_RendererFlip flip = SDL_FLIP_NONE;
+    Uint32 lastAnimationTime = 0;
+    Uint32 animationDelay;
     std::vector<SDL_Texture *> standingsAnimations;
     std::vector<SDL_Texture *> movingAnimations;
     std::vector<SDL_Texture *> attackingAnimations;
-
-    //SimpleAI os;
 };
 
 
