@@ -5,7 +5,7 @@
 		<Option title="another_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/pc/CLionProjects/another-test/cmake-build-debug"/>
@@ -84,16 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/pc/CLionProjects/another-test/Button.cpp">
+			<Option target="another_test"/>
+		</Unit>
+		<Unit filename="C:/Users/pc/CLionProjects/another-test/Button.h">
+			<Option target="another_test"/>
+		</Unit>
+		<Unit filename="C:/Users/pc/CLionProjects/another-test/Character.cpp">
+			<Option target="another_test"/>
+		</Unit>
+		<Unit filename="C:/Users/pc/CLionProjects/another-test/Character.h">
+			<Option target="another_test"/>
+		</Unit>
 		<Unit filename="C:/Users/pc/CLionProjects/another-test/Collision.cpp">
 			<Option target="another_test"/>
 		</Unit>
 		<Unit filename="C:/Users/pc/CLionProjects/another-test/Collision.h">
-			<Option target="another_test"/>
-		</Unit>
-		<Unit filename="C:/Users/pc/CLionProjects/another-test/Enemy.cpp">
-			<Option target="another_test"/>
-		</Unit>
-		<Unit filename="C:/Users/pc/CLionProjects/another-test/Enemy.h">
 			<Option target="another_test"/>
 		</Unit>
 		<Unit filename="C:/Users/pc/CLionProjects/another-test/Entity.cpp">
@@ -106,12 +112,6 @@
 			<Option target="another_test"/>
 		</Unit>
 		<Unit filename="C:/Users/pc/CLionProjects/another-test/Manager.h">
-			<Option target="another_test"/>
-		</Unit>
-		<Unit filename="C:/Users/pc/CLionProjects/another-test/Map.cpp">
-			<Option target="another_test"/>
-		</Unit>
-		<Unit filename="C:/Users/pc/CLionProjects/another-test/Map.h">
 			<Option target="another_test"/>
 		</Unit>
 		<Unit filename="C:/Users/pc/CLionProjects/another-test/Player.cpp">
@@ -137,9 +137,6 @@
 		</Unit>
 		<Unit filename="C:/Users/pc/CLionProjects/another-test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="C:/Users/pc/CLionProjects/another-test/cmake/FindSDL2.cmake">
-			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

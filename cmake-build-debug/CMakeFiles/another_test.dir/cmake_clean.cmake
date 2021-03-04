@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/another_test.dir/Button.cpp.obj"
+  "CMakeFiles/another_test.dir/Character.cpp.obj"
   "CMakeFiles/another_test.dir/Collision.cpp.obj"
-  "CMakeFiles/another_test.dir/Enemy.cpp.obj"
   "CMakeFiles/another_test.dir/Entity.cpp.obj"
   "CMakeFiles/another_test.dir/Manager.cpp.obj"
-  "CMakeFiles/another_test.dir/Map.cpp.obj"
   "CMakeFiles/another_test.dir/Player.cpp.obj"
   "CMakeFiles/another_test.dir/TextureLoader.cpp.obj"
   "CMakeFiles/another_test.dir/Weapon.cpp.obj"

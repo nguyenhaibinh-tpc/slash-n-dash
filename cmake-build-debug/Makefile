@@ -142,6 +142,60 @@ another_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/build
 .PHONY : another_test/fast
 
+Button.obj: Button.cpp.obj
+
+.PHONY : Button.obj
+
+# target to build an object file
+Button.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Button.cpp.obj
+.PHONY : Button.cpp.obj
+
+Button.i: Button.cpp.i
+
+.PHONY : Button.i
+
+# target to preprocess a source file
+Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Button.cpp.i
+.PHONY : Button.cpp.i
+
+Button.s: Button.cpp.s
+
+.PHONY : Button.s
+
+# target to generate assembly for a file
+Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Button.cpp.s
+.PHONY : Button.cpp.s
+
+Character.obj: Character.cpp.obj
+
+.PHONY : Character.obj
+
+# target to build an object file
+Character.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Character.cpp.obj
+.PHONY : Character.cpp.obj
+
+Character.i: Character.cpp.i
+
+.PHONY : Character.i
+
+# target to preprocess a source file
+Character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Character.cpp.i
+.PHONY : Character.cpp.i
+
+Character.s: Character.cpp.s
+
+.PHONY : Character.s
+
+# target to generate assembly for a file
+Character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Character.cpp.s
+.PHONY : Character.cpp.s
+
 Collision.obj: Collision.cpp.obj
 
 .PHONY : Collision.obj
@@ -168,33 +222,6 @@ Collision.s: Collision.cpp.s
 Collision.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Collision.cpp.s
 .PHONY : Collision.cpp.s
-
-Enemy.obj: Enemy.cpp.obj
-
-.PHONY : Enemy.obj
-
-# target to build an object file
-Enemy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Enemy.cpp.obj
-.PHONY : Enemy.cpp.obj
-
-Enemy.i: Enemy.cpp.i
-
-.PHONY : Enemy.i
-
-# target to preprocess a source file
-Enemy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Enemy.cpp.i
-.PHONY : Enemy.cpp.i
-
-Enemy.s: Enemy.cpp.s
-
-.PHONY : Enemy.s
-
-# target to generate assembly for a file
-Enemy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Enemy.cpp.s
-.PHONY : Enemy.cpp.s
 
 Entity.obj: Entity.cpp.obj
 
@@ -249,33 +276,6 @@ Manager.s: Manager.cpp.s
 Manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Manager.cpp.s
 .PHONY : Manager.cpp.s
-
-Map.obj: Map.cpp.obj
-
-.PHONY : Map.obj
-
-# target to build an object file
-Map.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Map.cpp.obj
-.PHONY : Map.cpp.obj
-
-Map.i: Map.cpp.i
-
-.PHONY : Map.i
-
-# target to preprocess a source file
-Map.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Map.cpp.i
-.PHONY : Map.cpp.i
-
-Map.s: Map.cpp.s
-
-.PHONY : Map.s
-
-# target to generate assembly for a file
-Map.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\another_test.dir\build.make CMakeFiles/another_test.dir/Map.cpp.s
-.PHONY : Map.cpp.s
 
 Player.obj: Player.cpp.obj
 
@@ -394,21 +394,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... another_test
+	@echo ... Button.obj
+	@echo ... Button.i
+	@echo ... Button.s
+	@echo ... Character.obj
+	@echo ... Character.i
+	@echo ... Character.s
 	@echo ... Collision.obj
 	@echo ... Collision.i
 	@echo ... Collision.s
-	@echo ... Enemy.obj
-	@echo ... Enemy.i
-	@echo ... Enemy.s
 	@echo ... Entity.obj
 	@echo ... Entity.i
 	@echo ... Entity.s
 	@echo ... Manager.obj
 	@echo ... Manager.i
 	@echo ... Manager.s
-	@echo ... Map.obj
-	@echo ... Map.i
-	@echo ... Map.s
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s

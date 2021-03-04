@@ -19,16 +19,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/CMakeRCInformation.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
-  "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
-  "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/CheckIncludeFile.cmake"
-  "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/CheckLibraryExists.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/Compiler/GNU.cmake"
-  "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
-  "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/FindPackageMessage.cmake"
-  "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/FindThreads.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "C:/Users/pc/AppData/Local/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.17/Modules/Platform/Windows-GNU-C.cmake"
@@ -44,7 +38,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeRCCompiler.cmake"
   "CMakeFiles/3.17.5/CMakeSystem.cmake"
-  "../cmake/FindSDL2.cmake"
   )
 
 # The corresponding makefile is:

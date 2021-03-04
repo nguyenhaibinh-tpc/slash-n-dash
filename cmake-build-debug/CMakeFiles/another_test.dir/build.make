@@ -118,24 +118,10 @@ CMakeFiles/another_test.dir/TextureLoader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/another_test.dir/TextureLoader.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\CLionProjects\another-test\TextureLoader.cpp -o CMakeFiles\another_test.dir\TextureLoader.cpp.s
 
-CMakeFiles/another_test.dir/Map.cpp.obj: CMakeFiles/another_test.dir/flags.make
-CMakeFiles/another_test.dir/Map.cpp.obj: CMakeFiles/another_test.dir/includes_CXX.rsp
-CMakeFiles/another_test.dir/Map.cpp.obj: ../Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/another_test.dir/Map.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\another_test.dir\Map.cpp.obj -c C:\Users\pc\CLionProjects\another-test\Map.cpp
-
-CMakeFiles/another_test.dir/Map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/another_test.dir/Map.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\CLionProjects\another-test\Map.cpp > CMakeFiles\another_test.dir\Map.cpp.i
-
-CMakeFiles/another_test.dir/Map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/another_test.dir/Map.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\CLionProjects\another-test\Map.cpp -o CMakeFiles\another_test.dir\Map.cpp.s
-
 CMakeFiles/another_test.dir/Collision.cpp.obj: CMakeFiles/another_test.dir/flags.make
 CMakeFiles/another_test.dir/Collision.cpp.obj: CMakeFiles/another_test.dir/includes_CXX.rsp
 CMakeFiles/another_test.dir/Collision.cpp.obj: ../Collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/another_test.dir/Collision.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/another_test.dir/Collision.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\another_test.dir\Collision.cpp.obj -c C:\Users\pc\CLionProjects\another-test\Collision.cpp
 
 CMakeFiles/another_test.dir/Collision.cpp.i: cmake_force
@@ -149,7 +135,7 @@ CMakeFiles/another_test.dir/Collision.cpp.s: cmake_force
 CMakeFiles/another_test.dir/Entity.cpp.obj: CMakeFiles/another_test.dir/flags.make
 CMakeFiles/another_test.dir/Entity.cpp.obj: CMakeFiles/another_test.dir/includes_CXX.rsp
 CMakeFiles/another_test.dir/Entity.cpp.obj: ../Entity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/another_test.dir/Entity.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/another_test.dir/Entity.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\another_test.dir\Entity.cpp.obj -c C:\Users\pc\CLionProjects\another-test\Entity.cpp
 
 CMakeFiles/another_test.dir/Entity.cpp.i: cmake_force
@@ -163,7 +149,7 @@ CMakeFiles/another_test.dir/Entity.cpp.s: cmake_force
 CMakeFiles/another_test.dir/Player.cpp.obj: CMakeFiles/another_test.dir/flags.make
 CMakeFiles/another_test.dir/Player.cpp.obj: CMakeFiles/another_test.dir/includes_CXX.rsp
 CMakeFiles/another_test.dir/Player.cpp.obj: ../Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/another_test.dir/Player.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/another_test.dir/Player.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\another_test.dir\Player.cpp.obj -c C:\Users\pc\CLionProjects\another-test\Player.cpp
 
 CMakeFiles/another_test.dir/Player.cpp.i: cmake_force
@@ -177,7 +163,7 @@ CMakeFiles/another_test.dir/Player.cpp.s: cmake_force
 CMakeFiles/another_test.dir/Weapon.cpp.obj: CMakeFiles/another_test.dir/flags.make
 CMakeFiles/another_test.dir/Weapon.cpp.obj: CMakeFiles/another_test.dir/includes_CXX.rsp
 CMakeFiles/another_test.dir/Weapon.cpp.obj: ../Weapon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/another_test.dir/Weapon.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/another_test.dir/Weapon.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\another_test.dir\Weapon.cpp.obj -c C:\Users\pc\CLionProjects\another-test\Weapon.cpp
 
 CMakeFiles/another_test.dir/Weapon.cpp.i: cmake_force
@@ -188,31 +174,45 @@ CMakeFiles/another_test.dir/Weapon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/another_test.dir/Weapon.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\CLionProjects\another-test\Weapon.cpp -o CMakeFiles\another_test.dir\Weapon.cpp.s
 
-CMakeFiles/another_test.dir/Enemy.cpp.obj: CMakeFiles/another_test.dir/flags.make
-CMakeFiles/another_test.dir/Enemy.cpp.obj: CMakeFiles/another_test.dir/includes_CXX.rsp
-CMakeFiles/another_test.dir/Enemy.cpp.obj: ../Enemy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/another_test.dir/Enemy.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\another_test.dir\Enemy.cpp.obj -c C:\Users\pc\CLionProjects\another-test\Enemy.cpp
+CMakeFiles/another_test.dir/Character.cpp.obj: CMakeFiles/another_test.dir/flags.make
+CMakeFiles/another_test.dir/Character.cpp.obj: CMakeFiles/another_test.dir/includes_CXX.rsp
+CMakeFiles/another_test.dir/Character.cpp.obj: ../Character.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/another_test.dir/Character.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\another_test.dir\Character.cpp.obj -c C:\Users\pc\CLionProjects\another-test\Character.cpp
 
-CMakeFiles/another_test.dir/Enemy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/another_test.dir/Enemy.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\CLionProjects\another-test\Enemy.cpp > CMakeFiles\another_test.dir\Enemy.cpp.i
+CMakeFiles/another_test.dir/Character.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/another_test.dir/Character.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\CLionProjects\another-test\Character.cpp > CMakeFiles\another_test.dir\Character.cpp.i
 
-CMakeFiles/another_test.dir/Enemy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/another_test.dir/Enemy.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\CLionProjects\another-test\Enemy.cpp -o CMakeFiles\another_test.dir\Enemy.cpp.s
+CMakeFiles/another_test.dir/Character.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/another_test.dir/Character.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\CLionProjects\another-test\Character.cpp -o CMakeFiles\another_test.dir\Character.cpp.s
+
+CMakeFiles/another_test.dir/Button.cpp.obj: CMakeFiles/another_test.dir/flags.make
+CMakeFiles/another_test.dir/Button.cpp.obj: CMakeFiles/another_test.dir/includes_CXX.rsp
+CMakeFiles/another_test.dir/Button.cpp.obj: ../Button.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\CLionProjects\another-test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/another_test.dir/Button.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\another_test.dir\Button.cpp.obj -c C:\Users\pc\CLionProjects\another-test\Button.cpp
+
+CMakeFiles/another_test.dir/Button.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/another_test.dir/Button.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\CLionProjects\another-test\Button.cpp > CMakeFiles\another_test.dir\Button.cpp.i
+
+CMakeFiles/another_test.dir/Button.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/another_test.dir/Button.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\CLionProjects\another-test\Button.cpp -o CMakeFiles\another_test.dir\Button.cpp.s
 
 # Object files for target another_test
 another_test_OBJECTS = \
 "CMakeFiles/another_test.dir/main.cpp.obj" \
 "CMakeFiles/another_test.dir/Manager.cpp.obj" \
 "CMakeFiles/another_test.dir/TextureLoader.cpp.obj" \
-"CMakeFiles/another_test.dir/Map.cpp.obj" \
 "CMakeFiles/another_test.dir/Collision.cpp.obj" \
 "CMakeFiles/another_test.dir/Entity.cpp.obj" \
 "CMakeFiles/another_test.dir/Player.cpp.obj" \
 "CMakeFiles/another_test.dir/Weapon.cpp.obj" \
-"CMakeFiles/another_test.dir/Enemy.cpp.obj"
+"CMakeFiles/another_test.dir/Character.cpp.obj" \
+"CMakeFiles/another_test.dir/Button.cpp.obj"
 
 # External object files for target another_test
 another_test_EXTERNAL_OBJECTS =
@@ -220,12 +220,12 @@ another_test_EXTERNAL_OBJECTS =
 another_test.exe: CMakeFiles/another_test.dir/main.cpp.obj
 another_test.exe: CMakeFiles/another_test.dir/Manager.cpp.obj
 another_test.exe: CMakeFiles/another_test.dir/TextureLoader.cpp.obj
-another_test.exe: CMakeFiles/another_test.dir/Map.cpp.obj
 another_test.exe: CMakeFiles/another_test.dir/Collision.cpp.obj
 another_test.exe: CMakeFiles/another_test.dir/Entity.cpp.obj
 another_test.exe: CMakeFiles/another_test.dir/Player.cpp.obj
 another_test.exe: CMakeFiles/another_test.dir/Weapon.cpp.obj
-another_test.exe: CMakeFiles/another_test.dir/Enemy.cpp.obj
+another_test.exe: CMakeFiles/another_test.dir/Character.cpp.obj
+another_test.exe: CMakeFiles/another_test.dir/Button.cpp.obj
 another_test.exe: CMakeFiles/another_test.dir/build.make
 another_test.exe: C:/MinGW/lib/libSDL2main.a
 another_test.exe: C:/MinGW/lib/libSDL2.dll.a

@@ -622,6 +622,14 @@ C:/MinGW/include/SDL2/begin_code.h
 close_code.h
 C:/MinGW/include/SDL2/close_code.h
 
+C:/MinGW/include/SDL2/SDL_ttf.h
+SDL.h
+C:/MinGW/include/SDL2/SDL.h
+begin_code.h
+C:/MinGW/include/SDL2/begin_code.h
+close_code.h
+C:/MinGW/include/SDL2/close_code.h
+
 C:/MinGW/include/SDL2/SDL_version.h
 SDL_stdinc.h
 C:/MinGW/include/SDL2/SDL_stdinc.h
@@ -648,17 +656,21 @@ C:/MinGW/include/SDL2/begin_code.h
 
 C:/MinGW/include/SDL2/close_code.h
 
+C:/Users/pc/CLionProjects/another-test/Button.h
+Entity.h
+C:/Users/pc/CLionProjects/another-test/Entity.h
+
+C:/Users/pc/CLionProjects/another-test/Character.h
+vector
+-
+Entity.h
+C:/Users/pc/CLionProjects/another-test/Entity.h
+
 C:/Users/pc/CLionProjects/another-test/Collision.h
 SDL.h
 C:/Users/pc/CLionProjects/another-test/SDL.h
 iostream
 C:/Users/pc/CLionProjects/another-test/iostream
-
-C:/Users/pc/CLionProjects/another-test/Enemy.h
-vector
--
-Entity.h
-C:/Users/pc/CLionProjects/another-test/Entity.h
 
 C:/Users/pc/CLionProjects/another-test/Entity.h
 TextureLoader.h
@@ -667,36 +679,32 @@ C:/Users/pc/CLionProjects/another-test/TextureLoader.h
 C:/Users/pc/CLionProjects/another-test/Manager.cpp
 cstring
 -
+random
+-
+chrono
+-
+algorithm
+-
 Manager.h
 C:/Users/pc/CLionProjects/another-test/Manager.h
-Enemy.h
-C:/Users/pc/CLionProjects/another-test/Enemy.h
-bits/stdc++.h
-C:/Users/pc/CLionProjects/another-test/bits/stdc++.h
+Character.h
+C:/Users/pc/CLionProjects/another-test/Character.h
+Button.h
+C:/Users/pc/CLionProjects/another-test/Button.h
 
 C:/Users/pc/CLionProjects/another-test/Manager.h
 SDL2/SDL.h
 C:/Users/pc/CLionProjects/another-test/SDL2/SDL.h
 SDL2/SDL_image.h
 C:/Users/pc/CLionProjects/another-test/SDL2/SDL_image.h
+SDL2/SDL_ttf.h
+C:/Users/pc/CLionProjects/another-test/SDL2/SDL_ttf.h
 iostream
 -
-Map.h
-C:/Users/pc/CLionProjects/another-test/Map.h
 Collision.h
 C:/Users/pc/CLionProjects/another-test/Collision.h
 Player.h
 C:/Users/pc/CLionProjects/another-test/Player.h
-
-C:/Users/pc/CLionProjects/another-test/Map.h
-SDL.h
-C:/Users/pc/CLionProjects/another-test/SDL.h
-TextureLoader.h
-C:/Users/pc/CLionProjects/another-test/TextureLoader.h
-vector
-C:/Users/pc/CLionProjects/another-test/vector
-Entity.h
-C:/Users/pc/CLionProjects/another-test/Entity.h
 
 C:/Users/pc/CLionProjects/another-test/Player.h
 Entity.h
@@ -709,6 +717,8 @@ SDL2/SDL.h
 C:/Users/pc/CLionProjects/another-test/SDL2/SDL.h
 SDL2/SDL_image.h
 C:/Users/pc/CLionProjects/another-test/SDL2/SDL_image.h
+SDL_ttf.h
+C:/Users/pc/CLionProjects/another-test/SDL_ttf.h
 
 C:/Users/pc/CLionProjects/another-test/Weapon.h
 Entity.h

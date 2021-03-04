@@ -27,7 +27,14 @@ void Entity::setPosition(int xpos, int ypos) {
 
 
 void Entity::Render() {
-    //SDL_RenderCopy(objRenderer, objTexture, &srcR, &destR);
     SDL_RenderCopy(Manager::renderer, objTexture, nullptr, &destR);
+}
+void Entity::SrcRender() {
+    SDL_RenderCopy(Manager::renderer, objTexture, &srcR, &destR);
+}
+
+void Entity::setObjTexture(SDL_Texture *texture) {
+    SDL_DestroyTexture(Entity::objTexture);
+    Entity::objTexture = texture;
 }
 
